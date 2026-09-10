@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mathbytyler.com/sitemap.xml
+User-agent: *\nAllow: /\n\nSitemap: https://mathbytyler.com/sitemap.xml\n

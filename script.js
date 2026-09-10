@@ -20,25 +20,13 @@ document.querySelectorAll('.site-nav a').forEach(link => {
   });
 });
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-const form = document.querySelector('#consultation-form');
+const form = document.querySelector('#contact-form');
 const status = document.querySelector('#form-status');
 
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
-
   if (!form.reportValidity()) return;
 
   const data = new FormData(form);
@@ -61,7 +49,7 @@ Student grade: ${grade}
 Preferred format: ${format}
 Current math course: ${course}
 
-What's going on:
+What's happening:
 ${message}
 
 Thanks!`
