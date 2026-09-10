@@ -413,3 +413,18 @@ button,input,textarea,select{font:inherit}
   .faq-only{grid-template-columns:1fr}
   .referral-note{position:static}
 }
+
+
+.honeypot{
+  position:absolute !important;
+  left:-9999px !important;
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+}
+
+.privacy-note{
+  margin:10px 0 0;
+  font-size:.78rem;
+  color:rgba(255,255,255,.55);
+}

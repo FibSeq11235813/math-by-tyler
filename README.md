@@ -14,3 +14,7 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Replace the photo placeholder with a real photo of Tyler
 
 - Experience language updated to reflect 20+ years of tutoring, beginning in Tyler's teens.
+
+- About section now mentions Tyler's Mechanical Engineering study at the University of South Florida.
+- Consultation form restored using the same Formspree endpoint as The Farmers Brown: xwleegod.
+- No public email address is displayed on the site.
