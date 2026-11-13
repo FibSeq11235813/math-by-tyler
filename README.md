@@ -18,3 +18,8 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - About section now mentions Tyler's Mechanical Engineering study at the University of South Florida.
 - Consultation form restored using the same Formspree endpoint as The Farmers Brown: xwleegod.
 - No public email address is displayed on the site.
+
+- Added website-ready portrait to About section.
+- Updated form headline to “How Can I Help?”
+- Updated base tutoring rate to $80/hour.
+- Added contest math teaching experience.
