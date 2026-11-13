@@ -30,3 +30,5 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Added an exploratory small-group classes section and group-class inquiry option.
 
 - Replaced the sparse hero math panel with the denser generated mathematics artwork.
+
+- Replaced the dense hero math artwork with the new middle-ground version: random placement, slight rotations, faint grid, and moderate visual density.
