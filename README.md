@@ -45,3 +45,8 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 
 - Updated header descriptor to: Private Tutoring & Advanced Problem Solving.
 - Replaced the generic M brand mark with a TB monogram in the header and favicon.
+
+- Restored header hierarchy: Math by Tyler on top, with Private Tutoring & Advanced Problem Solving beneath it.
+- Replaced TB monogram with a summation-symbol (∑) brand mark and matching favicon.
+- Replaced headshot with the newly supplied portrait and converted it to optimized WebP.
+- Converted the hero math artwork to optimized WebP and updated site references.
