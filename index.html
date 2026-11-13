@@ -353,7 +353,7 @@
               I’ll follow up to let you know whether I think I’m a good fit.
             </p>
 
-            <form action="https://formspree.io/f/xwleegod" method="POST">
+            <form id="consultation-form" action="https://formspree.io/f/xwleegod" method="POST">
               <input type="hidden" name="_subject" value="Math by Tyler consultation request" />
 
               <div class="honeypot" aria-hidden="true">
@@ -420,7 +420,8 @@
                 <textarea name="message" rows="6" placeholder="Where are they struggling, what are they preparing for, or what would you like them to work on?" required></textarea>
               </label>
 
-              <button type="submit" class="button solid wide">Request a consultation</button>
+              <button type="submit" class="button solid wide" id="consultation-submit">Request a consultation</button>
+              <p class="form-inline-status" id="form-inline-status" role="status" aria-live="polite"></p>
               <p class="privacy-note">Your contact information is submitted through this form and is not published on the website.</p>
             </form>
           </div>
@@ -428,6 +429,19 @@
       </div>
     </section>
   </main>
+
+
+  <dialog class="submission-dialog" id="submission-dialog" aria-labelledby="submission-title">
+    <div class="submission-dialog-inner">
+      <div class="submission-check" aria-hidden="true">✓</div>
+      <p class="section-tag">Message sent</p>
+      <h2 id="submission-title">Thanks — I received your inquiry.</h2>
+      <p>
+        Your information was submitted successfully. I’ll review what you sent and follow up using the email address you provided.
+      </p>
+      <button type="button" class="button solid" id="submission-close">Back to the site</button>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <div class="wrap footer-layout">

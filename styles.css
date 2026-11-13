@@ -510,3 +510,74 @@ button,input,textarea,select{font:inherit}
     font-size:.92rem;
   }
 }
+
+
+/* In-page Formspree confirmation */
+.form-inline-status{
+  min-height:1.25em;
+  margin:10px 0 0;
+  font-size:.84rem;
+  color:rgba(255,255,255,.68);
+}
+
+.form-inline-status.is-error{
+  color:#ffb9b9;
+}
+
+.submission-dialog{
+  width:min(460px,calc(100% - 32px));
+  border:0;
+  border-radius:24px;
+  padding:0;
+  background:#fff;
+  color:var(--text);
+  box-shadow:0 30px 90px rgba(12,16,44,.28);
+}
+
+.submission-dialog::backdrop{
+  background:rgba(15,16,32,.58);
+  backdrop-filter:blur(3px);
+}
+
+.submission-dialog-inner{
+  padding:30px;
+}
+
+.submission-dialog .section-tag{
+  margin:0 0 8px;
+}
+
+.submission-dialog h2{
+  margin:0 0 12px;
+  font-family:"Instrument Serif",Georgia,serif;
+  font-size:clamp(2rem,5vw,3rem);
+  line-height:1;
+  letter-spacing:-.03em;
+}
+
+.submission-dialog p:not(.section-tag){
+  margin:0 0 24px;
+  color:var(--muted);
+}
+
+.submission-check{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--soft);
+  color:var(--accent);
+  font-size:1.35rem;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.submission-dialog .button{
+  width:100%;
+  border:0;
+}
+
+@media (max-width:520px){
+  .submission-dialog-inner{padding:24px}
+}

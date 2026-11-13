@@ -38,3 +38,7 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Made the four student-type cards interactive.
 - Hover/focus highlights a card; click/keyboard selection persists and populates the new Student type form field.
 - Changing the Student type dropdown also updates the highlighted card.
+
+- Form now submits to Formspree asynchronously with fetch, so visitors stay on mathbytyler.com.
+- Successful submissions show an in-page confirmation dialog instead of navigating to Formspree.
+- Submission errors are shown inline below the form button.

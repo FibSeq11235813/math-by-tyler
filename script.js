@@ -90,3 +90,90 @@ studentTypeSelect?.addEventListener('change', () => {
 document.querySelector('.fit-stack')?.addEventListener('mouseleave', () => {
   if (selectedStudentType) highlightStudentType(selectedStudentType, { selected: true });
 });
+
+
+const consultationForm = document.querySelector('#consultation-form');
+const consultationSubmit = document.querySelector('#consultation-submit');
+const inlineFormStatus = document.querySelector('#form-inline-status');
+const submissionDialog = document.querySelector('#submission-dialog');
+const submissionClose = document.querySelector('#submission-close');
+
+function openSubmissionDialog() {
+  if (!submissionDialog) return;
+  if (typeof submissionDialog.showModal === 'function') {
+    submissionDialog.showModal();
+  } else {
+    submissionDialog.setAttribute('open', '');
+  }
+}
+
+function closeSubmissionDialog() {
+  if (!submissionDialog) return;
+  if (typeof submissionDialog.close === 'function') {
+    submissionDialog.close();
+  } else {
+    submissionDialog.removeAttribute('open');
+  }
+}
+
+submissionClose?.addEventListener('click', closeSubmissionDialog);
+
+submissionDialog?.addEventListener('click', event => {
+  if (event.target === submissionDialog) closeSubmissionDialog();
+});
+
+consultationForm?.addEventListener('submit', async event => {
+  event.preventDefault();
+
+  if (!consultationForm.reportValidity()) return;
+
+  const originalButtonText = consultationSubmit?.textContent || 'Request a consultation';
+  if (consultationSubmit) {
+    consultationSubmit.disabled = true;
+    consultationSubmit.textContent = 'Sending…';
+  }
+  if (inlineFormStatus) {
+    inlineFormStatus.textContent = '';
+    inlineFormStatus.classList.remove('is-error');
+  }
+
+  try {
+    const response = await fetch(consultationForm.action, {
+      method: 'POST',
+      body: new FormData(consultationForm),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      let message = 'I couldn’t send that form just now. Please check the fields and try again.';
+      try {
+        const data = await response.json();
+        if (Array.isArray(data?.errors) && data.errors.length) {
+          message = data.errors.map(error => error.message).filter(Boolean).join(' ');
+        }
+      } catch (_) {}
+      throw new Error(message);
+    }
+
+    consultationForm.reset();
+    selectedStudentType = '';
+    studentTypeCards.forEach(card => {
+      card.classList.remove('active', 'is-selected');
+      card.setAttribute('aria-pressed', 'false');
+    });
+
+    openSubmissionDialog();
+  } catch (error) {
+    if (inlineFormStatus) {
+      inlineFormStatus.textContent = error?.message || 'Something went wrong. Please try again.';
+      inlineFormStatus.classList.add('is-error');
+    }
+  } finally {
+    if (consultationSubmit) {
+      consultationSubmit.disabled = false;
+      consultationSubmit.textContent = originalButtonText;
+    }
+  }
+});
