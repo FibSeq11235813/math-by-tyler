@@ -42,3 +42,6 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Form now submits to Formspree asynchronously with fetch, so visitors stay on mathbytyler.com.
 - Successful submissions show an in-page confirmation dialog instead of navigating to Formspree.
 - Submission errors are shown inline below the form button.
+
+- Updated header descriptor to: Private Tutoring & Advanced Problem Solving.
+- Replaced the generic M brand mark with a TB monogram in the header and favicon.

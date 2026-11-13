@@ -54,11 +54,17 @@ button,input,textarea,select{font:inherit}
 .brand-mark{
   width:46px;height:46px;border-radius:14px;
   display:grid;place-items:center;
-  background:var(--bg-dark);color:#fff;font-weight:700;font-size:1.1rem;
+  background:var(--bg-dark);color:#fff;font-weight:700;font-size:.9rem;
+  letter-spacing:.02em;
   box-shadow:var(--shadow)
 }
 .brand-text{display:flex;flex-direction:column;line-height:1.05}
-.brand-text small{font-size:.64rem;letter-spacing:.18em;color:var(--muted)}
+.brand-text small{
+  font-size:.56rem;
+  letter-spacing:.16em;
+  color:var(--muted);
+  max-width:340px;
+}
 .brand-text strong{font-size:1.08rem}
 .site-nav{display:flex;align-items:center;gap:26px}
 .site-nav a{
