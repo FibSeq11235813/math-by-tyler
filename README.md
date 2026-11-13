@@ -28,3 +28,5 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Made Art of Problem Solving contest-math teaching experience explicit.
 - Expanded student range to include regular college-level tutoring and Calculus.
 - Added an exploratory small-group classes section and group-class inquiry option.
+
+- Replaced the sparse hero math panel with the denser generated mathematics artwork.
