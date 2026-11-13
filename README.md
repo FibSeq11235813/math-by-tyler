@@ -50,3 +50,5 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Replaced TB monogram with a summation-symbol (∑) brand mark and matching favicon.
 - Replaced headshot with the newly supplied portrait and converted it to optimized WebP.
 - Converted the hero math artwork to optimized WebP and updated site references.
+
+- Added an optional Student name field to the consultation form.
