@@ -32,3 +32,5 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Replaced the sparse hero math panel with the denser generated mathematics artwork.
 
 - Replaced the dense hero math artwork with the new middle-ground version: random placement, slight rotations, faint grid, and moderate visual density.
+
+- Removed all small-group class content and inquiry options; site is back to one-on-one tutoring only.
