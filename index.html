@@ -126,11 +126,14 @@
       <div class="wrap">
         <div class="fit-head">
           <div class="section-tag">Who it’s for</div>
-          <h2>Different students. Different goals.</h2>
+          <div>
+            <h2>Different students. Different goals.</h2>
+            <p class="fit-instruction">Hover to explore. Click the best match to add it to the inquiry form.</p>
+          </div>
         </div>
 
         <div class="fit-stack">
-          <article class="fit-row">
+          <article class="fit-row" tabindex="0" role="button" aria-pressed="false" data-student-type="stuck" data-student-label="The stuck student">
             <div class="fit-index">01</div>
             <div class="fit-content">
               <h3>The stuck student</h3>
@@ -139,14 +142,14 @@
                 We slow down, locate missing pieces, and rebuild the foundation.
               </p>
             </div>
-            <div class="fit-tags">
+            <div class="fit-tags"><span class="selected-marker" aria-hidden="true">Selected ✓</span>
               <span>Pre-Algebra</span>
               <span>Algebra I</span>
               <span>Skill gaps</span>
             </div>
           </article>
 
-          <article class="fit-row active">
+          <article class="fit-row" tabindex="0" role="button" aria-pressed="false" data-student-type="almost-there" data-student-label="The almost-there student">
             <div class="fit-index">02</div>
             <div class="fit-content">
               <h3>The almost-there student</h3>
@@ -155,14 +158,14 @@
                 We strengthen understanding, sharpen problem-solving habits, and build more independence.
               </p>
             </div>
-            <div class="fit-tags">
+            <div class="fit-tags"><span class="selected-marker" aria-hidden="true">Selected ✓</span>
               <span>Geometry</span>
               <span>Algebra II</span>
               <span>Precalculus</span>
             </div>
           </article>
 
-          <article class="fit-row">
+          <article class="fit-row" tabindex="0" role="button" aria-pressed="false" data-student-type="advanced-contest" data-student-label="The advanced or contest-math student">
             <div class="fit-index">03</div>
             <div class="fit-content">
               <h3>The advanced or contest-math student</h3>
@@ -171,14 +174,14 @@
                 We go deeper into strategy, proof, pattern recognition, and non-routine problem solving.
               </p>
             </div>
-            <div class="fit-tags">
+            <div class="fit-tags"><span class="selected-marker" aria-hidden="true">Selected ✓</span>
               <span>Honors</span>
               <span>Contest math</span>
               <span>Enrichment</span>
             </div>
           </article>
 
-          <article class="fit-row college-row">
+          <article class="fit-row college-row" tabindex="0" role="button" aria-pressed="false" data-student-type="college" data-student-label="The college student">
             <div class="fit-index">04</div>
             <div class="fit-content">
               <h3>The college student</h3>
@@ -187,7 +190,7 @@
                 rebuild prerequisites that are making the course harder than it needs to be, or prepare for an exam.
               </p>
             </div>
-            <div class="fit-tags">
+            <div class="fit-tags"><span class="selected-marker" aria-hidden="true">Selected ✓</span>
               <span>College Algebra</span>
               <span>Precalculus</span>
               <span>Calculus</span>
@@ -384,6 +387,17 @@
                   </select>
                 </label>
               </div>
+
+              <label>
+                Student type
+                <select name="student_type" id="student-type">
+                  <option value="">Not sure / choose one</option>
+                  <option value="stuck">The stuck student</option>
+                  <option value="almost-there">The almost-there student</option>
+                  <option value="advanced-contest">The advanced or contest-math student</option>
+                  <option value="college">The college student</option>
+                </select>
+              </label>
 
               <div class="two-col">
                 <label>

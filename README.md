@@ -34,3 +34,7 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Replaced the dense hero math artwork with the new middle-ground version: random placement, slight rotations, faint grid, and moderate visual density.
 
 - Removed all small-group class content and inquiry options; site is back to one-on-one tutoring only.
+
+- Made the four student-type cards interactive.
+- Hover/focus highlights a card; click/keyboard selection persists and populates the new Student type form field.
+- Changing the Student type dropdown also updates the highlighted card.

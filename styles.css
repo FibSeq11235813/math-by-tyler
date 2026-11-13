@@ -440,3 +440,73 @@ button,input,textarea,select{font:inherit}
 }
 
 
+
+
+/* Interactive student-type selector */
+.fit-instruction{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+.fit-row{
+  position:relative;
+  cursor:pointer;
+  transition:
+    background .22s ease,
+    color .22s ease,
+    border-color .22s ease,
+    transform .22s ease,
+    box-shadow .22s ease;
+  outline:none;
+}
+
+.fit-row:hover,
+.fit-row:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(12,16,44,.10);
+}
+
+.fit-row:focus-visible{
+  box-shadow:0 0 0 3px rgba(90,103,255,.22), 0 14px 34px rgba(12,16,44,.10);
+}
+
+.fit-row.active{
+  background:linear-gradient(135deg,#111327 0%, #1a1d39 100%);
+  color:#fff;
+  border-color:#1a1d39;
+  box-shadow:0 18px 40px rgba(12,16,44,.16);
+}
+
+.fit-row.active .fit-index{color:var(--gold)}
+.fit-row.active .fit-content p{color:rgba(255,255,255,.72)}
+.fit-row.active .fit-tags span:not(.selected-marker){
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.14);
+  color:#fff;
+}
+
+.selected-marker{
+  display:none !important;
+  border-color:transparent !important;
+  background:transparent !important;
+  color:var(--gold) !important;
+  font-weight:700;
+  padding-left:0 !important;
+}
+
+.fit-row.is-selected .selected-marker{
+  display:inline-flex !important;
+}
+
+.fit-row.is-selected{
+  border-color:var(--accent);
+}
+
+@media (hover:none){
+  .fit-instruction{font-size:0}
+  .fit-instruction::after{
+    content:"Tap the best match to add it to the inquiry form.";
+    font-size:.92rem;
+  }
+}
