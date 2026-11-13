@@ -23,3 +23,8 @@ This is a redesigned static site for mathbytyler.com with a different visual lan
 - Updated form headline to “How Can I Help?”
 - Updated base tutoring rate to $80/hour.
 - Added contest math teaching experience.
+
+- Reworked About section and removed 'shortcut-disliker' language.
+- Made Art of Problem Solving contest-math teaching experience explicit.
+- Expanded student range to include regular college-level tutoring and Calculus.
+- Added an exploratory small-group classes section and group-class inquiry option.
